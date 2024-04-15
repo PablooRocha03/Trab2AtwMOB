@@ -7,6 +7,88 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* Estilos para a sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    margin-top: 50px; /* Adicionando margem para dar espaço entre a imagem e o menu sidebar */
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px; /* Largura da sidebar */
+	height: 100%;
+	background-color: #333; /* Cor de fundo da sidebar */
+	padding-top: 20px;
+	z-index: 1000;
+	transition: transform 0.3s ease;
+}
+
+.sidebar h1 {
+	color: #ffffff; /* Cor do texto */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.menu-toggle {
+	display: none;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: #000000;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.menu-toggle i {
+	transition: transform 0.3s ease;
+}
+
+#main {
+	margin-left: 250px; /* Ajuste para acomodar a sidebar */
+}
+
+.container {
+	padding: 20px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+	.sidebar {
+		transform: translateX(-100%);
+	}
+
+	.menu-toggle {
+		display: block;
+	}
+
+	#main {
+		margin-left: 0;
+	}
+
+	.sidebar.active {
+		transform: translateX(0);
+	}
+
+	.menu-toggle.active i {
+		transform: rotate(180deg);
+	}
+}
+
+
+
+
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -98,7 +180,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #000000;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -111,7 +193,7 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #ffffff;
 		text-decoration: none;
 	}
 
@@ -122,7 +204,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #787878;
+		color: #000000;
 		font-weight: 400;
 	}
 
@@ -135,7 +217,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #000000;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -190,7 +272,7 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-bottom: solid 2px #efefef;
+		border-bottom: solid 2px #3e3e3e;
 		margin: 2em 0;
 	}
 
@@ -1767,7 +1849,7 @@ input, select, textarea {
 	header p {
 		color: #b2b2b2;
 		position: relative;
-		margin: 0 0 1.5em 0;
+		margin: 0 0 2.5em 0;
 	}
 
 	header h2 + p {

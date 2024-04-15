@@ -4,6 +4,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+function toggleMenu() {
+	var sidebar = document.getElementById("sidebar");
+	var menuToggle = document.querySelector(".menu-toggle");
+	sidebar.classList.toggle("active");
+	menuToggle.classList.toggle("active");
+}
+
+
+
+
+
 (function($) {
 
 	var $window = $(window),
